@@ -7,21 +7,31 @@
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-      background: linear-gradient(135deg, #ffd3a5, #fd6585);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #ffafbd, #ffc3a0);
       color: #333;
       text-align: center;
+      animation: bgAnimation 10s infinite alternate;
     }
+
+    @keyframes bgAnimation {
+      from { background-position: 0% 50%; }
+      to { background-position: 100% 50%; }
+    }
+
     h1 {
       margin-top: 50px;
-      font-size: 2.5em;
+      font-size: 2.8em;
+      text-shadow: 2px 2px #f0a;
     }
+
     p {
-      max-width: 600px;
+      max-width: 650px;
       margin: 20px auto;
       font-size: 1.2em;
-      line-height: 1.5;
+      line-height: 1.6;
     }
+
     .images {
       display: flex;
       flex-wrap: wrap;
@@ -29,37 +39,55 @@
       gap: 20px;
       padding: 20px;
     }
+
     .images img {
-      flex: 1 1 300px;
-      max-width: 300px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s, box-shadow 0.3s;
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease-in-out;
     }
+
     .images img:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      transform: scale(1.1);
     }
+
+    .cursor {
+      display: inline-block;
+      width: 10px;
+      height: 20px;
+      background-color: #333;
+      animation: blink 1s infinite;
+      margin-left: 2px;
+    }
+
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+
     footer {
       margin: 40px 0 20px;
       font-size: 0.9em;
       color: #555;
+      opacity: 0.8;
     }
   </style>
 </head>
 <body>
   <h1>С Днём рождения, дружище!</h1>
   <p>
-    Эй, дружище, поздравляю с днюхой! Не могу поверить, что ты стал ещё старше — ведь в душе ты всё тот же безбашенный весельчак, которого я знаю. 
-    Желаю тебе тонну смеха, море приключений и чтобы каждый день был круче предыдущего. 
-    Оставайся таким же офигенным, дерзким и настоящим другом, как сейчас. 
-    Че, созвонимся сегодня?
+    Привет, кодер! Ещё один commit в твой личный репозиторий жизни — теперь тебе 24! Пусть твой жизненный код компилируется с первого раза, багов будет минимум, а фич — максимум. 
+    Оставайся таким же крутым парнем с отличным чувством юмора и стойким к дедлайнам. Давай без stack overflow сегодня, только расслабон и позитив!<span class="cursor"></span>
+    <br><br>Че, созвонимся сегодня?
   </p>
+
   <div class="images">
-    <img src="photo1.jpg" alt="Че тут забыл">
-    <img src="photo2.jpg" alt="-_-">
-    <img src="photo3.jpg" alt=":)">
+    <img src="photo1.jpg" alt="Фото 1">
+    <img src="photo2.jpg" alt="Фото 2">
+    <img src="photo3.jpg" alt="Фото 3">
   </div>
-  <footer>С днём рождения!</footer>
+
+
 </body>
 </html>
