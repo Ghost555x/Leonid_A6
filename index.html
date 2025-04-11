@@ -72,6 +72,38 @@
       color: #555;
       opacity: 0.8;
     }
+
+    .buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-decoration: none;
+}
+
+.yes {
+  background-color: #27ae60;
+}
+
+.no {
+  background-color: #c0392b;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
   </style>
 </head>
 <body>
@@ -81,6 +113,11 @@
     Оставайся таким же крутым парнем с отличным чувством юмора и стойким к дедлайнам. Давай без stack overflow сегодня, только расслабон и позитив!<span class="cursor"></span>
     <br><br><strong>Че, созвонимся сегодня?</strong>
   </p>
+<p>Че, созвонимся сегодня?</p>
+<div class="buttons">
+  <a class="btn yes" href="https://t.me/твой_логин_telegram">Да 😎</a>
+  <button class="btn no">Нет 😐</button>
+</div>
 
   <div class="images">
     <img src="photo1.jpg" alt="Фото 1">
